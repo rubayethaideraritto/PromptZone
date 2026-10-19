@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in</title>
+    <meta name="description" content="A searchable library of reusable AI prompts.">
+    
+    <meta name="csrf-token" content="lM0yF0FpnIxVjcGY4r1kLc4uWxmyoJF5zluRvcVj">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/app.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap site-header__inner">
+            <a class="brand" href="http://127.0.0.1:8000">
+                <span class="brand__mark" aria-hidden="true">PL</span>
+                <span class="brand__text">Prompt Library</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Main">
+                <a href="http://127.0.0.1:8000/library" class="">Library</a>
+
+                                    <a href="http://127.0.0.1:8000/login" class="is-current">Log in</a>
+                    <a href="http://127.0.0.1:8000/register" class="btn btn--primary btn--sm">Register</a>
+                            </nav>
+        </div>
+    </header>
+
+    <main class="wrap main" id="main">
+        <div class="alert alert--error" role="alert">
+        <p class="alert__title">Please correct the following:</p>
+        <ul class="alert__list">
+                            <li>These credentials do not match our records.</li>
+                    </ul>
+    </div>
+
+            <div class="auth-shell">
+        <div class="panel auth-card">
+            <h1 class="auth-card__title">Log in</h1>
+            <p class="auth-card__sub">Welcome back. Continue to your prompt library.</p>
+
+            <form method="POST" action="http://127.0.0.1:8000/login" class="form">
+                <input type="hidden" name="_token" value="lM0yF0FpnIxVjcGY4r1kLc4uWxmyoJF5zluRvcVj" autocomplete="off">
+                <div class="field">
+                    <label class="field__label" for="email">Email address</label>
+                    <input class="field__input"
+                           id="email"
+                           name="email"
+                           type="email"
+                           value="phase6-mixedcase@example.com"
+                           required
+                           autofocus
+                           autocomplete="username"
+                            aria-invalid="true" aria-describedby="email-error" >
+                                            <p class="field__error" id="email-error">These credentials do not match our records.</p>
+                                    </div>
+
+                <div class="field">
+                    <label class="field__label" for="password">Password</label>
+                    <input class="field__input"
+                           id="password"
+                           name="password"
+                           type="password"
+                           required
+                           autocomplete="current-password"
+                           >
+                                    </div>
+
+                <div class="field field--checkbox">
+                    <input type="checkbox" id="remember" name="remember" value="1" >
+                    <label for="remember">Remember me on this device</label>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--block">Log in</button>
+            </form>
+
+            <p class="auth-card__alt">
+                Don&rsquo;t have an account? <a href="http://127.0.0.1:8000/register">Register</a>
+            </p>
+        </div>
+    </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>AI Prompt Library &amp; Manager</p>
+        </div>
+    </footer>
+
+    <script src="http://127.0.0.1:8000/js/app.js" defer></script>
+</body>
+</html>
